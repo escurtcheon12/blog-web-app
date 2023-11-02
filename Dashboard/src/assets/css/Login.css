@@ -1,0 +1,13 @@
+.bg_login {
+    background-image: url('./../img/bg-login.png');
+    background-size: cover;
+}
+
+.form_login {
+    text-align: center;
+}
+
+.button_login {
+    width: 100% !important;
+ 
+}

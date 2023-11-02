@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300&display=swap");
+
+
+.container_about {
+    font-family: "Poppins", sans-serif;
+    margin-top: 8rem;
+}
+
+.header_about {
+    font-weight: bold;
+}
+
+.line_br {
+    margin: auto;
+}
+
+.p_about {
+    max-width: 50rem;
+    margin: auto;
+}

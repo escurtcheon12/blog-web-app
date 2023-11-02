@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Content " id="Project-4db" database="MySql" >
+	<schema name="content " >
+		<table name="blog" prior="tbl" >
+			<column name="blog_id" type="int" jt="4" mandatory="y" />
+			<column name="title" type="varchar" length="250" jt="12" />
+			<index name="pk_blog" unique="PRIMARY_KEY" >
+				<column name="blog_id" />
+			</index>
+		</table>
+		<table name="blogs" prior="tbl" >
+			<column name="title" prior="blog_id" type="varchar" length="250" jt="12" mandatory="y" />
+			<index name="pk_blogs" unique="PRIMARY_KEY" >
+				<column name="title" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="blogss" prior="sadasd" >
+			<column name="blog_id" type="int" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="blog_title" prior="title" type="varchar" length="200" jt="12" />
+			<column name="blog_content" prior="content" type="varchar" length="500" jt="12" />
+			<column name="blog_image" prior="image" type="varchar" length="500" jt="12" />
+			<column name="blog_date" prior="date" type="date" jt="91" />
+			<column name="blog_author" prior="author" type="varchar" length="200" jt="12" />
+			<column name="blog_status" prior="status" type="varchar" length="100" jt="12" />
+			<column name="blog_views" type="int" jt="4" />
+			<column name="category_id" type="int" jt="4" />
+			<column name="viewers_id" type="int" jt="4" />
+			<column name="comment_id" type="int" jt="4" />
+			<index name="pk_tbl" unique="PRIMARY_KEY" >
+				<column name="blog_id" />
+			</index>
+			<index name="unq_blogss_category_id" unique="UNIQUE_KEY" >
+				<column name="category_id" />
+			</index>
+			<index name="unq_blogss_viewers_id" unique="UNIQUE_KEY" >
+				<column name="viewers_id" />
+			</index>
+			<index name="unq_blogss_comment_id" unique="UNIQUE_KEY" >
+				<column name="comment_id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="c" prior="tbl" />
+		<table name="categories" prior="tbl" >
+			<column name="category_id" prior="category" type="int" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="category_name" type="varchar" length="100" jt="12" />
+			<index name="pk_categories" unique="PRIMARY_KEY" >
+				<column name="category_id" />
+			</index>
+			<fk name="fk_categories_blogss" to_schema="content " to_table="blogss" >
+				<fk_column name="category_id" pk="category_id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="comments" prior="tbl" >
+			<column name="comment_id" type="int" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="comment_name" type="varchar" length="100" jt="12" />
+			<column name="comment_date" type="date" jt="91" />
+			<index name="pk_comments" unique="PRIMARY_KEY" >
+				<column name="comment_id" />
+			</index>
+			<fk name="fk_comments_blogss" to_schema="content " to_table="blogss" >
+				<fk_column name="comment_id" pk="comment_id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="viewers" prior="tbl" >
+			<column name="viewers_id" type="int" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="viewers_os" prior="viewers_" type="varchar" length="250" jt="12" />
+			<column name="viewers_time_accesed" type="datetime" length="200" jt="93" />
+			<index name="pk_viewers" unique="PRIMARY_KEY" >
+				<column name="viewers_id" />
+			</index>
+			<fk name="fk_viewers_comments" to_schema="content " to_table="blogss" >
+				<fk_column name="viewers_id" pk="viewers_id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+	</schema>
+	<connector name="MyDb" database="MySql" host="localhost" port="3306" user="root" />
+	<layout name="Default Layout" id="Layout-1e74" show_relation="columns" >
+		<entity schema="content " name="blogss" color="C1D8EE" x="48" y="160" />
+		<entity schema="content " name="categories" color="C1D8EE" x="256" y="224" />
+		<entity schema="content " name="comments" color="C1D8EE" x="208" y="112" />
+		<entity schema="content " name="viewers" color="C1D8EE" x="224" y="320" />
+		<callout x="64" y="48" pointer="Round" >
+			<comment><![CDATA[DbSchema is disconnected from the database.
+New designed tables will be saved to project file and later can be create in any database.
+Right-click the layout to create new tables. Drop this callout from its context menu.]]></comment>
+		</callout>
+	</layout>
+</project>

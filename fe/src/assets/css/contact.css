@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300&display=swap");
+
+.container_contact {
+    font-family: "Poppins", sans-serif;
+    margin-top: 6rem;
+}
+
+.label_contact {
+    font-weight: bold;
+    text-align: left !important;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+}
+
+.grid_contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.inputTop_contact {
+    display: flex;
+}
+
+.input_bottom {
+    width: 100%;
+}
+
+.parent_formTop_contact {
+    display: flex;
+    justify-content: center;
+}
+
+.formTop_contact {
+    width: 20rem !important;
+
+}
+
+
+.parent_input_bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.text-area {
+    height: 10rem !important;
+}
+
+.btn_send_contact {
+    width: 100%;
+}

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.headerCardTable {
+    font-size: 1.5rem;
+}
+
+.img_list_blog {
+    height: auto;
+    width: 4rem;
+    object-fit: cover;
+    border: 1px dashed white;
+}
+
+.notif_container {
+    width: 100% ;
+    display: flex;
+    flex-direction: column;
+}
+
+.notif {
+    width: 25rem ;
+    height: 15rem;
+    overflow: auto;
+ 
+}
+
+.notif_date {
+    font-size: 0.7rem;
+}
+
+.notif_message {
+    width: 100%;
+    max-width: 10px !important;
+    background-color: aqua;
+
+}
+
+.notif_line {
+    width: 100%;
+    height: 0.001rem;
+    opacity: .2;
+    background-color: black;
+}
+
+.notif_item {
+    width: 100%;
+}
+
+.logo_sidebar {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid white;
+    border-radius: .3rem;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo_sidebar > h3 {
+    text-decoration: none;
+}
+
+.parag_length {
+    width: 6rem;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+  }
+
+.text-body-headline {
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-radius: 1rem !important;
+}

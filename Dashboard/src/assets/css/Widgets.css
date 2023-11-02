@@ -1,0 +1,13 @@
+.parentWidgets{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.shapeWidgets {
+    margin: 1rem;
+    width: 15rem;
+}
